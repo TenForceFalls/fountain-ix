@@ -140,8 +140,8 @@ export default function Component() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <StatCard title="ASN" value="AS55287" icon={<Server />} />
-              <StatCard title="IPv4 Subnet" value="TBD" icon={<Network />} />
-              <StatCard title="IPv6 Subnet" value="TBD" icon={<Network />} />
+              <StatCard title="IPv4 Subnet" value="149.112.138.0/24" icon={<Network />} />
+              <StatCard title="IPv6 Subnet" value="	2001:505:144::/48" icon={<Network />} />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
