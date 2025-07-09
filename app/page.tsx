@@ -216,7 +216,8 @@ export default function Component() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <ContactCard icon={<Mail />} title="General Inquiries" email="info@fountain-ix.net" description="For general questions and information" />
               <ContactCard icon={<Network />} title="Peering Requests" email="peering@fountain-ix.net" description="For membership and peering applications" />
-              <ContactCard icon={<Shield />} title="NOC / Technical" email="noc@fountain-ix.net" description="24/7 network operations center" />
+              <ContactCard icon={<Shield />} title="NOC / Technical" email="noc@fountain-ix.net" description="Network operations center" />
+              <ContactCard icon={<Shield />} title="PeeringDB" link="https://www.peeringdb.com/ix/4772"/>
               <Card className="bg-transparent border border-blue-500/20 backdrop-blur-sm hover:border-blue-400/40 transition-all duration-300">
                 <CardHeader>
                   <CardTitle className="text-white flex items-center space-x-3">
@@ -229,12 +230,9 @@ export default function Component() {
                 <CardContent className="space-y-2">
                   <p className="text-slate-300">1530 Swift St</p>
                   <p className="text-slate-300">North Kansas City, MO 64116</p>
-                  <p className="text-slate-400 text-sm">Physical presence required for peering</p>
                 </CardContent>
               </Card>
-            </div>
-
-            <Card className="bg-transparent border border-blue-500/20 backdrop-blur-sm">
+            <Card className="bg-transparent border border-blue-500/20 backdrop-blur-sm hover:border-blue-400/40 transition-all duration-300">
               <CardContent className="text-center py-12">
                 <h3 className="text-2xl font-semibold text-white mb-4">Ready to Join FOUNTAIN-IX?</h3>
                 <p className="text-slate-300 mb-8">
@@ -251,6 +249,8 @@ export default function Component() {
                 </Button>
               </CardContent>
             </Card>
+            </div>
+
           </div>
         )}
       </main>
@@ -325,7 +325,7 @@ function SectionHeader({ title, subtitle }: any) {
   )
 }
 
-function ContactCard({ title, email, description, icon }: any) {
+function ContactCard({ title, email, link, description, icon }: any) {
   return (
     <Card className="bg-transparent border border-blue-500/20 backdrop-blur-sm hover:border-blue-400/40 transition-all duration-300">
       <CardHeader>
@@ -336,6 +336,7 @@ function ContactCard({ title, email, description, icon }: any) {
       </CardHeader>
       <CardContent className="space-y-2">
         <p className="text-blue-300 font-mono">{email}</p>
+        <p className="text-blue-300 font-mono">{link}</p>
         <p className="text-slate-400 text-sm">{description}</p>
       </CardContent>
     </Card>
